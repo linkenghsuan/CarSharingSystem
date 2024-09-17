@@ -4,17 +4,17 @@
 In a free floating car sharing system, the vehicle disposition may become imbalance during opertaion time.
 
 This could leads to shortages in some areas and surpluses in others. This not only increases the cost of dispatching personnel but also reduces overall operational efficiency. 
-To address this issue, we have developed an innovative vehicle dispatch algorithm that leverages user incentives.
+To address this issue, an innovative vehicle dispatch algorithm has been developed that leverages user incentives.
 
 ### Method
-Our algorithm encourages users to return vehicles to locations identified by the system as needing more vehicles by offering them rate discounts. This user incentive mechanism helps to balance vehicle disposition.
+The algorithm encourages users to return vehicles to locations identified by the system as needing more vehicles by offering them discounts. This user incentive mechanism helps to balance vehicle disposition.
 
 The method is composed of two phase.
-In the first phase, we develop a discrete event simulation model using historical data. This model captures the dynamics and randomness of the shared vehicle system and can flexibly incorporate various incentive scenarios.
-In the second phase, we utilize the simulation model from Phase One to apply an algorithm aimed at maximizing revenue (objective value). This algorithm determines the optimal vehicle allocation (decision variables).
+In the first phase, a discrete event simulation model is developed using historical data. This model captures the dynamics and randomness of the shared vehicle system and can flexibly incorporate various incentive scenarios.
+In the second phase, the simulation model is utilized from Phase One to apply an algorithm aimed at maximizing revenue (objective value). This algorithm determines the optimal vehicle allocation (decision variables).
 
 ### Benefits
-By following this two-phase development approach, we aim to create a robust and efficient vehicle dispatch algorithm that not only enhances operational efficiency but also increases revenue through strategic user incentives.
+By following this two-phase development approach, The aim is to create a robust and efficient vehicle dispatch algorithm that not only enhances operational efficiency but also increases revenue through strategic user incentives.
 
 - Reduced Dispatch Costs: By incentivizing users to assist in vehicle redistribution, the need for dispatching is decreased and the personnel can get more time to clean up and prepare a vehicle for the next use.
 - Increased Dispatch Frequency: With increased frequency of dispatches, more vehicles can be used by potential needs.
@@ -199,9 +199,9 @@ run_simulation() :
 ### Parameters
 ```
 particle = 10
-𝑐_1, 𝑐_2 = 1 
-𝑅_1, 𝑅_2 = random number between 0 and 1
-𝑤 = 1
+c1, c2 = 1 
+R1, R2 = random number between 0 and 1
+w - 1
 ```
 ### Pseudo Code
 ```
@@ -212,5 +212,5 @@ for t in iteration:
 		update local optimal
 	update global optimal
 	#update particle
-	𝑃=𝑤∙𝑥_𝑝 + 𝑐_1∙𝑅_1∙𝑥_𝐿𝑜𝑐𝑎𝑙𝐵𝑒𝑠𝑡 + 𝑐_2∙𝑅_2∙𝑥_𝐺𝑙𝑜𝑏𝑎𝑙𝐵𝑒𝑠𝑡
+	P = W*x_p + c1*R1*x_localBest + C2*R2*x_globalBest
 ```
